@@ -4,14 +4,14 @@ public class MyDate {
 	private String date;
 	public static String formatChange(String date) {
 		int i=0;
-		int dt=0;
+		int day=0;
 		int month=0;
 		int year=0;
 		String format1="";
 		String format2="";
 		  for(i=0;i<2;i++) {
-		        dt*= 10;
-		        dt += date.charAt(i) - '0'; 
+		        day*= 10;
+		        day += date.charAt(i) - '0'; 
 		  }
 		  for(i=2;i<4;i++)
 		  {
@@ -25,28 +25,28 @@ public class MyDate {
 		  }
 		  if(month==1 || month==3 ||month==5 ||month==7 ||month== 8 ||month==10 ||month==12 )
 			{
-			if(dt<1 || dt>31)
+			if(day<1 || day>31)
 					return "The entered dt is invalid";
 			}
 			else if (month==4 || month==6 ||month==9 ||month==11)
 			{
-			if(dt<1 || dt>30)
+			if(day<1 || day>30)
 				return "The entered dt is invalid";
 			}
 			else if(month==2) {
 if(year%4==0)
 {
 	
-	if(dt<1 || dt>29)
+	if(day<1 || day>29)
 		return "The entered dt is invalid";
 }
-	else if (dt<1 || dt>28)
+	else if (day<1 || day>28)
 		return "The entered dt is invalid";
 			}
 			else 
 				return "The moth entered is invalid";
-		format1=dateFormat1(dt,month,year);
-		format2=dateFormat2(dt,month,year);
+		format1=dateFormat1(day,month,year);
+		format2=dateFormat2(day,month,year);
 		System.out.println(format1+"\n"+format2);
 //		System.out.println("Date in dd/mm/yyyy format = "+format1+"\nDate in dd,month name, yyyy format = "+format2);
 		return format1+"; "+format2;
