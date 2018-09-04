@@ -27,7 +27,7 @@ public class Dates {
 	}
 
 	public static LocalDate futureDate(int i) {
-		LocalDate futureDate = LocalDate.of(day,month,year).plusDays(6);
+		LocalDate futureDate = LocalDate.of(day,month,year).plusDays(i);
 		System.out.println(futureDate);
 		return futureDate;
 	}
